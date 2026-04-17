@@ -1,0 +1,262 @@
+.products-hero {
+  padding:100px 0px; 
+  background-image: url('/products_hero.png'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: left;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.products-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 30, 64, 0.4) 0%, rgba(0, 30, 64, 0.8) 100%);
+}
+
+.products-hero .container {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #D1E4FF;
+  color: var(--primary-navy);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  color: white;
+  font-size: 100px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.hero-subtext {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #D1E4FF;
+  max-width: 700px;
+  opacity: 1;
+}
+
+.white-text {
+  color: white !important;
+}
+
+/* Nav & Search */
+.product-nav-section {
+  padding: 40px 0 20px;
+}
+
+.search-bar-full {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search-bar-full input {
+  width: 100%;
+  padding: 16px 20px 16px 50px;
+  border: none;
+  background: #F1F5F9;
+  border-radius: 4px;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.search-icon-fixed {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.product-category-links {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+}
+
+.product-category-links a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+
+.product-grid-section {
+  padding: 80px 0;
+}
+
+.grid-section-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.grid-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-navy);
+}
+
+
+.uniform-staggered-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.grid-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.grid-card:nth-child(even) {
+  margin-top: 140px; 
+}
+
+.card-img-container {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  text-align: left;
+}
+
+.card-info h3 {
+  font-family: var(--font-hero);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 6px;
+}
+
+.card-info p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Ready to Cook */
+.ready-to-cook-section {
+  padding: 100px 0;
+}
+
+.centered-title {
+  text-align: center;
+  font-size: 32px;
+  color: var(--primary-navy);
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: var(--primary-navy);
+  margin: 15px auto 80px;
+}
+
+.rtc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.rtc-item {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.rtc-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.rtc-image {
+  flex: 1;
+  height: 450px;
+}
+
+.rtc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.rtc-text {
+  flex: 1;
+  text-align: left;
+}
+
+.rtc-text h3 {
+  font-size: 36px;
+  color: var(--primary-navy);
+  margin-bottom: 20px;
+}
+
+.rtc-text p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+@media (max-width: 900px) {
+  .uniform-staggered-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .grid-card:nth-child(even) {
+    margin-top: 0;
+  }
+  .rtc-item, .rtc-item.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .rtc-text p {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Inria+Serif:wght@400;700&display=swap');
+
+:root {
+
+  --primary-navy: #001E40;
+  --accent-blue: #1D619D;
+  --text-main: #43474F;
+  --text-secondary: #64748B;
+  --bg-white: #ffffff;
+  --bg-mission: #F2F4F6;
+  
+
+  --bg-soft: #F8FAFC;
+  --border-color: #E2E8F0;
+  
+ 
+  --font-logo: 'Inria Serif', serif;
+  --font-hero: 'Manrope', sans-serif;
+  --font-main: 'Inter', sans-serif;
+  
+ 
+  --section-padding: 80px 0;
+  --container-width: 1280px;
+  
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  background: var(--bg-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-hero);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+
+p, span, li, a {
+  color: var(--text-main);
+}
+
+.secondary-text {
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: var(--primary-navy);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-blue);
+}
+
+.btn-secondary {
+  border: 1px solid var(--primary-navy);
+  color: var(--primary-navy);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-navy);
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-main);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+  color: var(--primary-navy);
+  font-family: var(--font-hero);
+}
+
+.section-subtitle {
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-blue);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
