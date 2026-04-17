@@ -72,7 +72,7 @@ button {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .btn {
@@ -84,6 +84,7 @@ button {
   align-items: center;
   gap: 8px;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -112,10 +113,11 @@ button {
 }
 
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 8vw, 4rem);
   margin-bottom: 2rem;
   color: var(--primary-navy);
   font-family: var(--font-hero);
+  line-height: 1.1;
 }
 
 .section-subtitle {
@@ -127,6 +129,16 @@ button {
   font-size: 0.875rem;
   margin-bottom: 1rem;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
 }
 
 

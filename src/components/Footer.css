@@ -94,8 +94,47 @@
   gap: 30px;
 }
 
+
+@media (max-width: 1024px) {
+  .footer-title {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 30px;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .info-group {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .footer-map {
+    aspect-ratio: 1/1;
   }
 }

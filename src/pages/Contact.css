@@ -260,11 +260,85 @@
   font-size: 13px;
 }
 
+
 @media (max-width: 1024px) {
-  .hero-flex, .contact-split-grid, .form-grid-row {
+  .hero-flex {
     flex-direction: column;
-    grid-template-columns: 1fr;
-    gap: 40px;
     align-items: flex-start;
+    gap: 40px;
+  }
+
+  .hero-title.large {
+    font-size: 64px;
+  }
+
+  .intro-line {
+    display: none;
+  }
+
+  .contact-split-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-links-col {
+    gap: 40px;
+  }
+
+  .form-card {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero-title.large {
+    font-size: 48px;
+  }
+
+  .contact-body-section {
+    padding: 60px 0;
+  }
+
+  .form-grid-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .chat-inline-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .map-banner-container {
+    height: 400px;
+  }
+
+  .map-overlay-card {
+    padding: 20px 30px;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title.large {
+    font-size: 40px;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .hero-intro p {
+    font-size: 16px;
+  }
+
+  .map-overlay-card {
+    width: 90%;
+    gap: 15px;
   }
 }
